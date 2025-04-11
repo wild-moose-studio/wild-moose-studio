@@ -1,0 +1,9 @@
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "Wild Moose Studio Index"
+title_separator          : "-"
+name                     : &name "Your Name"
+description              : &description "personal description"
+url                      : https://wild-moose-studio.github.io
+baseurl                  : ""
+repository               : "wild-moose-studio/wild-moose-studio.github.io"
