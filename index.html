@@ -5,65 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wild Moose Studio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Make the page take full height */
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #dceefc; /* pastel blue background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #dceefc;
       color: #2c3e50;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #b7daee;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1a3b5d;
+      text-decoration: none;
+    }
+
+    .logo::before {
+      content: "🫎 ";
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a3b5d;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #104461;
+    }
+
+    main {
+      flex: 1; /* grow to fill space */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-    }
-    header {
       text-align: center;
-      padding: 2rem;
+      padding: 4rem 2rem;
     }
+
     h1 {
       font-size: 3rem;
-      margin: 0;
+      margin-bottom: 1rem;
       color: #1a3b5d;
     }
-    p.tagline {
+
+    .tagline {
       font-size: 1.25rem;
       color: #4a6572;
     }
-    nav {
-      margin-top: 2rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #3d6e91;
-      background-color: #eef7fd;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background-color 0.2s ease;
-    }
-    nav a:hover {
-      background-color: #c6e6fb;
-    }
+
     footer {
-      margin-top: 3rem;
+      text-align: center;
       font-size: 0.875rem;
       color: #7a8c99;
+      padding: 2rem;
+      background-color: #b7daee;
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 0.5rem;
+      }
+
+      nav a {
+        padding-left: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Wild Moose Studio</h1>
-    <p class="tagline">Crafting unique worlds and unforgettable gameplay</p>
+    <a href="#" class="logo">Wild Moose Studio</a>
+    <nav>
+      <a href="https://github.com/wildmoosestudio">GitHub</a>
+      <a href="#">Games</a>
+      <a href="#">Team</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="https://github.com/wild-moose-studio">GitHub</a>
-    <a href="#">Games</a>
-    <a href="#">Team</a>
-    <a href="#">Contact</a>
-  </nav>
+  <main>
+    <h1>Welcome to Wild Moose Studio</h1>
+    <p class="tagline">Crafting unique worlds and unforgettable gameplay</p>
+  </main>
 
   <footer>
     &copy; 2025 Wild Moose Studio — All rights reserved
